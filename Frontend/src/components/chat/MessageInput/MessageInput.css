@@ -1,0 +1,50 @@
+.message-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.message-textarea {
+  flex: 1;
+  resize: none;
+  padding: 8px 10px;
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  color: var(--text-normal);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  max-height: 120px;
+}
+
+.message-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+.icon-btn:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-normal);
+}
+
+.send-btn {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background-color: var(--brand-primary);
+  color: #fff;
+  font-size: var(--font-size-sm);
+  transition: background-color var(--transition-fast);
+}
+
+.send-btn:hover {
+  background-color: var(--brand-primary-hover);
+}

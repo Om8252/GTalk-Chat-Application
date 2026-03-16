@@ -1,0 +1,224 @@
+.profile-modal {
+  box-sizing: border-box;
+  padding: 20px;
+  max-width: 480px;
+  width: 100%;
+  background: var(--bg-surface, #fff);
+  color: var(--text-primary, #222);
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(10, 10, 10, 0.06);
+}
+
+.profile-modal h2 {
+  margin: 0 0 12px 0;
+  font-size: 1.25rem;
+}
+
+.profile-modal .error-message {
+  background-color: #fee;
+  color: #c33;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #fcc;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+.profile-modal .success-message {
+  background-color: #efe;
+  color: #363;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #cfc;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+.profile-modal form {
+  display: grid;
+  gap: 16px;
+}
+
+.profile-modal .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-modal label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-modal .field-hint {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--text-secondary, #666);
+  margin-left: 8px;
+}
+
+.profile-modal input[type="text"],
+.profile-modal textarea,
+.profile-modal input[type="file"] {
+  padding: 8px 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  width: 100%;
+  transition: border-color 0.2s ease;
+}
+
+.profile-modal input[type="text"]:focus,
+.profile-modal textarea:focus,
+.profile-modal input[type="file"]:focus {
+  outline: none;
+  border-color: var(--primary, #0b84ff);
+  box-shadow: 0 0 0 2px rgba(11, 132, 255, 0.1);
+}
+
+.profile-modal textarea {
+  min-height: 80px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.profile-modal .avatar-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.profile-modal .avatar-preview {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(0,0,0,0.08);
+  transition: border-color 0.2s ease;
+}
+
+.profile-modal .avatar-wrapper:hover .avatar-preview {
+  border-color: var(--primary, #0b84ff);
+}
+
+.profile-modal .remove-avatar-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ff4444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.profile-modal .remove-avatar-btn:hover {
+  background: #cc0000;
+}
+
+.profile-modal .modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+.profile-modal .modal-actions button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 100px;
+}
+
+.profile-modal .modal-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.profile-modal .modal-actions button[type="button"] {
+  background: transparent;
+  color: var(--text-secondary, #444);
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+.profile-modal .modal-actions button[type="button"]:hover:not(:disabled) {
+  background: rgba(0,0,0,0.05);
+}
+
+.profile-modal .modal-actions button[type="submit"] {
+  background: var(--primary, #0b84ff);
+  color: #fff;
+}
+
+.profile-modal .modal-actions button[type="submit"]:hover:not(:disabled) {
+  background: #0056cc;
+  transform: translateY(-1px);
+}
+
+.profile-modal .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 480px) {
+  .profile-modal {
+    padding: 12px;
+    max-width: calc(100% - 24px);
+  }
+
+  .profile-modal h2 {
+    font-size: 1.1rem;
+  }
+
+  .profile-modal .avatar-preview {
+    width: 64px;
+    height: 64px;
+  }
+
+  .profile-modal .modal-actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  .profile-modal .modal-actions button {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .profile-modal .field-hint {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .profile-modal {
+    padding: 24px;
+  }
+
+  .profile-modal .avatar-preview {
+    width: 96px;
+    height: 96px;
+  }
+}

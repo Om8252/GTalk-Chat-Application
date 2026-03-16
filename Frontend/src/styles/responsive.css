@@ -1,0 +1,88 @@
+/* ---------- Small devices (phones) ---------- */
+@media (max-width: 600px) {
+  :root {
+    --sidebar-width-servers: 56px;
+    --sidebar-width-channels: 200px;
+  }
+
+  .app-root {
+    flex-direction: column;
+  }
+
+  /* Server sidebar collapses */
+  .server-sidebar {
+    width: var(--sidebar-width-servers);
+  }
+
+  /* Channel sidebar slides over content */
+  .channel-sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--sidebar-width-channels);
+    transform: translateX(-100%);
+    transition: transform var(--transition-normal);
+    z-index: var(--z-dropdown);
+  }
+
+  .channel-sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Chat area full width */
+  .chat-container {
+    width: 100%;
+  }
+
+  .chat-header {
+    padding: 0 12px;
+  }
+
+  .message-input {
+    padding: 8px;
+  }
+}
+
+/* ---------- Medium devices (tablets) ---------- */
+@media (min-width: 601px) and (max-width: 1024px) {
+  :root {
+    --sidebar-width-servers: 64px;
+    --sidebar-width-channels: 220px;
+  }
+
+  .server-sidebar {
+    width: var(--sidebar-width-servers);
+  }
+
+  .channel-sidebar {
+    width: var(--sidebar-width-channels);
+  }
+
+  .chat-container {
+    flex: 1;
+  }
+}
+
+/* ---------- Large devices (desktops) ---------- */
+@media (min-width: 1025px) {
+  .server-sidebar {
+    width: var(--sidebar-width-servers);
+  }
+
+  .channel-sidebar {
+    width: var(--sidebar-width-channels);
+  }
+
+  .chat-container {
+    flex: 1;
+  }
+}
+
+/* ---------- Accessibility: reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

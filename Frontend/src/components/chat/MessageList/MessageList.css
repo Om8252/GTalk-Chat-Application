@@ -1,0 +1,12 @@
+.message-list {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  background-color: var(--bg-primary);
+}
+
+.typing-indicator {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  margin-top: 4px;
+}

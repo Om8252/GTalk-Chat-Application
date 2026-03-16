@@ -1,0 +1,41 @@
+.chat-header {
+  height: var(--chat-header-height);
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+.chat-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.chat-icon {
+  color: var(--text-muted);
+}
+
+.chat-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-actions button {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background-color: transparent;
+  color: var(--text-muted);
+  transition: background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.chat-actions button:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-normal);
+}

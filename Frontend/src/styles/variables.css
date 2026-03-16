@@ -1,0 +1,67 @@
+/* src/styles/variables.css */
+
+:root {
+  /* Brand */
+  --brand-primary: #5865f2;
+  --brand-primary-hover: #4752c4;
+  --brand-danger: #ed4245;
+  --brand-success: #3ba55d;
+  --brand-warning: #faa61a;
+
+  /* Backgrounds */
+  --bg-app: #313338;
+  --bg-primary: #2b2d31;
+  --bg-secondary: #1e1f22;
+  --bg-tertiary: #111214;
+  --bg-hover: #3a3c43;
+  --bg-active: #404249;
+
+  /* Text */
+  --text-normal: #dbdee1;
+  --text-muted: #949ba4;
+  --text-link: #00a8fc;
+  --text-danger: #f23f42;
+
+  /* Borders & Shadows */
+  --border-default: #3f4147;
+  --border-subtle: #2b2d31;
+  --shadow-elevation-low: 0 1px 4px rgba(0, 0, 0, 0.2);
+  --shadow-elevation-medium: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-elevation-high: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+  /* Typography */
+  --font-primary: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --font-size-xs: 11px;
+  --font-size-sm: 13px;
+  --font-size-md: 15px;
+  --font-size-lg: 17px;
+  --font-size-xl: 20px;
+
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.6;
+
+  /* Layout */
+  --sidebar-width-servers: 72px;
+  --sidebar-width-channels: 240px;
+  --chat-header-height: 48px;
+  --user-panel-height: 52px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-round: 50%;
+
+  /* Transitions */
+  --transition-fast: 120ms ease;
+  --transition-normal: 200ms ease;
+  --transition-slow: 320ms ease;
+
+  /* Z-index */
+  --z-tooltip: 1000;
+  --z-modal: 2000;
+  --z-dropdown: 1500;
+}
