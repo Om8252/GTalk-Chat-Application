@@ -1,0 +1,49 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3307/discord_db?useSSL=false&allowPublicKeyRetrieval=true
+    username: discord
+    password: discord
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+  flyway:
+    enabled: true       # we’ll rely on JPA auto-creation for now
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web.socket.server: DEBUG
+    org.springframework.web.socket.messaging: DEBUG
+    org.springframework.messaging: DEBUG
+    org.springframework.messaging.simp.stomp: TRACE
+
+
+jwt:
+  secret: "change-me-super-secret-and-long-enough" # override in env for prod
+  expiration-ms: 3000000 # 50 mins
+
+servlet:
+  multipart:
+    max-file-size: 10MB
+    max-request-size: 10MB
+
+
+server:
+  port: 8080
+
+minio:
+  url: http://localhost:9000
+  access-key: admin
+  secret-key: password
+  bucket: pngone
+
+redis:
+  host: localhost
+  port: 6379
